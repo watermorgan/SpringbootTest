@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.yingcankeji.architect.busidelegate.EJBService"
+        x="36" y="64">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.yingcankeji.architect.busidelegate.BusinessService"/>
+    </Class>
+    <Class
+        name="com.yingcankeji.architect.busidelegate.BusinessDelegate"
+        x="504" y="386">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.yingcankeji.architect.busidelegate.BusinessService"
+            endpointName="businessService" kind="Simple"/>
+        <Association
+            destinationClassName="com.yingcankeji.architect.busidelegate.BusinessLookUp"
+            endpointName="lookupService" kind="Simple"/>
+        <Communication destinationClassName="com.yingcankeji.architect.busidelegate.BusinessLookUp"/>
+        <Communication destinationClassName="com.yingcankeji.architect.busidelegate.BusinessService"/>
+    </Class>
+    <Class name="com.yingcankeji.architect.busidelegate.BusinessLookUp"
+        x="560" y="220">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="com.yingcankeji.architect.busidelegate.BusinessDelegatePatternDemo"
+        x="115" y="291">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.yingcankeji.architect.busidelegate.BusinessDelegate"/>
+        <Communication destinationClassName="com.yingcankeji.architect.busidelegate.Client"/>
+    </Class>
+    <Class name="com.yingcankeji.architect.busidelegate.BusinessService"
+        x="265" y="43">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.yingcankeji.architect.busidelegate.JMSService"
+        x="529" y="38">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.yingcankeji.architect.busidelegate.BusinessService"/>
+    </Class>
+    <Class name="com.yingcankeji.architect.busidelegate.Client" x="122" y="373">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.yingcankeji.architect.busidelegate.BusinessDelegate"
+            endpointName="businessDelegate" kind="Simple"/>
+        <Communication destinationClassName="com.yingcankeji.architect.busidelegate.BusinessDelegate"/>
+    </Class>
+</ClassDiagram>
